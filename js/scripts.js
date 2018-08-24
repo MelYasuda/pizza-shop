@@ -42,6 +42,7 @@ $(document).ready(function(){
       alert("Please select size and toppings.");
     } else {
       $("#price").text("$" + newPizza.price());
+      $("#price-display").show();
     }
   });
 });

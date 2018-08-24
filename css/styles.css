@@ -1,0 +1,17 @@
+img {
+  float: left;
+  display: inline;
+}
+
+.container {
+  float: right;
+  display: inline;
+}
+
+body {
+  font-family: 'Italiana', serif;
+}
+
+#price-display {
+  display: none;
+}

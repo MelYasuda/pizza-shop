@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link href="https://fonts.googleapis.com/css?family=Italiana" rel="stylesheet">
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.3.1.js"></script>
@@ -9,6 +10,8 @@
   </head>
   <body>
     <div class="container">
+      <h1>Mel's Famouse Pizzaria</h1>
+      <h3>Customize your pizza!</h3>
       <form id="choice-form">
         <div class="form-group">
           <label for="size" class="form-control">Please select your pizza size.</label>
@@ -28,8 +31,10 @@
         </div>
         <button type="submit" class="btn btn-info">Price</button>
       </form>
-      <div id="price">
+      <div id="price-display">
+        Your total is <span id="price"></span>.
       </div>
     </div>
+    <img src="img/pizza.png" alt="photo of pizza">
   </body>
 </html>
