@@ -1,5 +1,4 @@
 // business logic
-
 function Pizza(size, toppings) {
   this.size = size;
   this.toppings = toppings;
@@ -12,7 +11,6 @@ Pizza.prototype.price = function(){
   });
 
   return size[this.size] + toppingPrice;
-    // toppings[this.toppings[0]] + toppings[this.toppings[1]] +toppings[this.toppings[2]] +toppings[this.toppings[3]]);
 }
 
 var size = {
@@ -39,6 +37,11 @@ $(document).ready(function(){
         inputtedToppings.push(inputtedTopping);
     });
     var newPizza = new Pizza (inputtedSize, inputtedToppings);
-    $("#price").append(newPizza.price());
+
+    if(inputtedSize === "none" || inputtedToppings.length === 0) {
+      alert("Please select size and toppings.");
+    } else {
+      $("#price").text("$" + newPizza.price());
+    }
   });
 });
