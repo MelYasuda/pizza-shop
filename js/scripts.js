@@ -5,12 +5,13 @@ function Pizza(size, toppings) {
 }
 
 Pizza.prototype.price = function(){
-   var toppingPrice = 0;
+  // Loop through toppins array and add the corresponding value (price) of toppings variable
+   var toppingTotalPrice = 0;
    this.toppings.forEach(function(topping){
-   toppingPrice += toppings[topping];
+   toppingTotalPrice += toppingsPrices[topping];
   });
 
-  return size[this.size] + toppingPrice;
+  return size[this.size] + toppingTotalPrice;
 }
 
 var size = {
@@ -19,7 +20,7 @@ var size = {
   large: 10
 }
 
-var toppings = {
+var toppingsPrices = {
   cheese: 1,
   pepperoni: 1,
   anchovy: 2,
@@ -32,6 +33,7 @@ $(document).ready(function(){
   $("form#choice-form").submit(function(event){
     event.preventDefault();
     var inputtedSize = $("#size").val();
+    // store checked values inside an array
     var inputtedToppings = [];
     $("input:checkbox[name=pizza-toppings]:checked").each(function(){
       var inputtedTopping = $(this).val();
