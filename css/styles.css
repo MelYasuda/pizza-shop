@@ -1,6 +1,8 @@
 img {
   float: left;
   display: inline;
+  position: fixed;
+
 }
 
 .container {
@@ -13,9 +15,6 @@ body {
   font-family: 'Italiana', serif;
 }
 
-#price-display {
-  display: none;
-}
 
 h1 {
   text-align: center;
@@ -49,4 +48,8 @@ button {
   margin-left: 100px;
   margin-top: 25px;
   width: 150px;
+}
+
+#price-display {
+  font-size: 80px;
 }

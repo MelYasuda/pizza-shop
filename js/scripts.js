@@ -28,6 +28,7 @@ var toppings = {
 
 // user interface
 $(document).ready(function(){
+
   $("form#choice-form").submit(function(event){
     event.preventDefault();
     var inputtedSize = $("#size").val();
@@ -40,9 +41,9 @@ $(document).ready(function(){
 
     if(inputtedSize === "none" || inputtedToppings.length === 0) {
       alert("Please select size and toppings.");
+      $('#myModal').modal('hide')
     } else {
       $("#price").text("$" + newPizza.price());
-      $("#price-display").show();
     }
   });
 });
