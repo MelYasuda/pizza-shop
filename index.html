@@ -8,33 +8,46 @@
     <script src="js/scripts.js"></script>
     <title>Mel's Famous Pizzaria</title>
   </head>
+
   <body>
+
     <div class="container">
+
       <h1>Mel's Famouse Pizzaria</h1>
-      <h3>Customize your pizza!</h3>
-      <form id="choice-form">
-        <div class="form-group">
-          <label for="size" class="form-control">Please select your pizza size.</label>
-          <select id="size">
-            <option value="none">Size</option>
-            <option value="small">Small</option>
-            <option value="medium">Medium</option>
-            <option value="large">Large</option>
-          </select>
+      <h3>~Customize your pizza~</h3>
+
+      <div class="selection-body">
+
+        <form id="choice-form">
+          <div class="form-group">
+            <label for="size" class="form-control">Please select your pizza size.</label>
+            <select id="size">
+              <option value="none">Size</option>
+              <option value="small">Small ($7)</option>
+              <option value="medium">Medium ($9)</option>
+              <option value="large">Large ($10)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="topping" class="form-control">Please select your toppings.</label>
+            <input type="checkbox" name="pizza-toppings" value="cheese"> Cheese (+$1)<br>
+            <input type="checkbox" name="pizza-toppings" value="pepperoni"> Pepperoni (+$1)<br>
+            <input type="checkbox" name="pizza-toppings" value="anchovy"> Anchovy (+$2)<br>
+            <input type="checkbox" name="pizza-toppings" value="pineapple"> Pineapple (+$3)<br>
+          </div>
+          <button type="submit" class="btn btn-default">Price</button>
+        </form>
+
+        <div id="price-display">
+          Your total is <span id="price"></span>.
         </div>
-        <div class="form-group">
-          <label for="size" class="form-control">Please select your toppings.</label>
-          <input type="checkbox" name="pizza-toppings" value="cheese"> Cheese<br>
-          <input type="checkbox" name="pizza-toppings" value="pepperoni"> Pepperoni<br>
-          <input type="checkbox" name="pizza-toppings" value="anchovy"> Anchovy<br>
-          <input type="checkbox" name="pizza-toppings" value="pineapple"> Pineapple<br>
-        </div>
-        <button type="submit" class="btn btn-info">Price</button>
-      </form>
-      <div id="price-display">
-        Your total is <span id="price"></span>.
+
       </div>
+
     </div>
+
     <img src="img/pizza.png" alt="photo of pizza">
+
   </body>
+
 </html>
